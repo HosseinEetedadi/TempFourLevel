@@ -62,24 +62,54 @@ def simulate(env):
 
     cloud = Cloud(env, latency_roundtrip_ms=20)
 
+    
     nodes.append(create_node(env, 0, 0, Node.NodeType.SCHEDULER, 1.0))
-
     nodes.append(create_node(env, 1, 0, Node.NodeType.WORKER, 0.2))
     nodes.append(create_node(env, 2, 0, Node.NodeType.WORKER, 0.9))
     nodes.append(create_node(env, 3, 0, Node.NodeType.WORKER, 0.7))
+    # ww
     nodes.append(create_node(env, 4, 0, Node.NodeType.WORKER, 0.7))
     nodes.append(create_node(env, 5, 0, Node.NodeType.WORKER, 0.6))
+    nodes.append(create_node(env, 6, 0, Node.NodeType.WORKER, 0.2))
+    nodes.append(create_node(env, 7, 0, Node.NodeType.WORKER, 0.9))
+    nodes.append(create_node(env, 8, 0, Node.NodeType.WORKER, 0.7))
+    nodes.append(create_node(env, 9, 0, Node.NodeType.WORKER, 0.7))
+    nodes.append(create_node(env, 10, 0, Node.NodeType.WORKER, 0.6))
 
     if MULTI_CLUSTER:
-        nodes.append(create_node(env, 6, 1, Node.NodeType.SCHEDULER, 1.0))
-        nodes.append(create_node(env, 7, 1, Node.NodeType.WORKER, 0.9))
-        nodes.append(create_node(env, 8, 1, Node.NodeType.WORKER, 0.6))
+        nodes.append(create_node(env, 11, 1, Node.NodeType.SCHEDULER, 1.0))
+        nodes.append(create_node(env, 12, 1, Node.NodeType.WORKER, 0.9))#sdsdsd
+        nodes.append(create_node(env, 13, 1, Node.NodeType.WORKER, 0.6))
 
-        nodes.append(create_node(env, 9, 2, Node.NodeType.SCHEDULER, 1.0))
-        nodes.append(create_node(env, 10, 2, Node.NodeType.WORKER, 0.2))
-        nodes.append(create_node(env, 11, 2, Node.NodeType.WORKER, 0.7))
-        nodes.append(create_node(env, 12, 2, Node.NodeType.WORKER, 0.6))
-        nodes.append(create_node(env, 13, 2, Node.NodeType.WORKER, 0.5))
+        nodes.append(create_node(env, 14, 2, Node.NodeType.SCHEDULER, 1.0))
+        nodes.append(create_node(env, 15, 2, Node.NodeType.WORKER, 0.2))
+        nodes.append(create_node(env, 16, 2, Node.NodeType.WORKER, 0.7))
+        nodes.append(create_node(env, 17, 2, Node.NodeType.WORKER, 0.6))
+        # s
+        nodes.append(create_node(env, 18, 2, Node.NodeType.WORKER, 0.5))
+        nodes.append(create_node(env, 19, 2, Node.NodeType.WORKER, 0.2))
+        nodes.append(create_node(env, 20, 2, Node.NodeType.WORKER, 0.7))
+        nodes.append(create_node(env, 21, 2, Node.NodeType.WORKER, 0.6))
+        nodes.append(create_node(env, 22, 2, Node.NodeType.WORKER, 0.5))
+
+    # nodes.append(create_node(env, 0, 0, Node.NodeType.SCHEDULER, 1.0))
+
+    # nodes.append(create_node(env, 1, 0, Node.NodeType.WORKER, 0.2))
+    # nodes.append(create_node(env, 2, 0, Node.NodeType.WORKER, 0.9))
+    # nodes.append(create_node(env, 3, 0, Node.NodeType.WORKER, 0.7))
+    # nodes.append(create_node(env, 4, 0, Node.NodeType.WORKER, 0.7))
+    # nodes.append(create_node(env, 5, 0, Node.NodeType.WORKER, 0.6))
+
+    # if MULTI_CLUSTER:
+        # nodes.append(create_node(env, 6, 1, Node.NodeType.SCHEDULER, 1.0))
+        # nodes.append(create_node(env, 7, 1, Node.NodeType.WORKER, 0.9))
+        # nodes.append(create_node(env, 8, 1, Node.NodeType.WORKER, 0.6))
+
+        # nodes.append(create_node(env, 9, 2, Node.NodeType.SCHEDULER, 1.0))
+        # nodes.append(create_node(env, 10, 2, Node.NodeType.WORKER, 0.2))
+        # nodes.append(create_node(env, 11, 2, Node.NodeType.WORKER, 0.7))
+        # nodes.append(create_node(env, 12, 2, Node.NodeType.WORKER, 0.6))
+        # nodes.append(create_node(env, 13, 2, Node.NodeType.WORKER, 0.5))
     # print("this is the nodes: ", nodes)
     # nodes.append(create_node(env, 5, 0, Node.NodeType.WORKER, 0.2))
     # nodes.append(create_node(env, 6, 0, Node.NodeType.WORKER, 0.3))
